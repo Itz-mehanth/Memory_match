@@ -1,25 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import MemoryMatch from './MemoryMatch';
 
 function App() {
+  return <DynamicIframe url="https://game.rhym.io/game?id=GAM096083341755" />;
+}
+
+function DynamicIframe({ url }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <iframe
+    //   src={url}
+    //   width="100%"
+    //   height="900px"
+    //   style={{ border: "none" }}
+    //   title="Dynamic Iframe"
+    // ></iframe>
+    <MemoryMatch />
   );
 }
+
 
 export default App;
